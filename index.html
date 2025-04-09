@@ -64,11 +64,6 @@
             color: #555;
         }
 
-        .chart-container {
-            height: 600px;
-            max-width: 100%;
-        }
-
         canvas {
             width: 100% !important;
             height: 100% !important;
@@ -89,16 +84,14 @@
                         placeholder='Paste JSON data here!..'></textarea>
 
                     <div class="d-flex justify-content-end mt-3">
-                        <button id="processTextBtn" class="btn btn-primary">🚀 Proses JSON</button>
+                        <button id="processTextBtn" class="btn btn-primary">🚀 Process JSON</button>
                     </div>
                 </div>
 
                 <!-- Bottom: Result + Chart -->
                 <div class="col-12 d-none" id="resultContainer">
                     <div id="result" class="mb-3"></div>
-                    <div class="chart-container mt-3">
-                        <canvas id="dataChart"></canvas>
-                    </div>
+                    <div id="chartsContainer" class="my-4"></div>
                 </div>
             </div>
 
