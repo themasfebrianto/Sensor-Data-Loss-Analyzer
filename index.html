@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sensor Data Loss Analyzer</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="chart.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card-modern {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        h3 {
+            font-weight: 600;
+            color: #3b3f5c;
+        }
+
+        textarea.form-control {
+            border-radius: 10px;
+            border: 1px solid #dcdfe4;
+            background-color: #f9fafb;
+            resize: none;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea.form-control:focus {
+            border-color: #4a90e2;
+            box-shadow: none;
+        }
+
+        #processTextBtn {
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        #processTextBtn:hover {
+            background-color: #2f70d6;
+        }
+
+        #result {
+            background-color: #f1f3f5;
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .chart-container {
+            height: 350px;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .success-text {
+            color: #28a745;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="card-modern">
+            <h3 class="text-center mb-4">📊 Sensor Data Loss Analyzer</h3>
+
+            <div class="row g-4">
+                <!-- Left: JSON Input -->
+                <div class="col-md-6">
+                    <label for="jsonText" class="label mb-2">Paste JSON Data:</label>
+                    <textarea class="form-control" id="jsonText" rows="15"
+                        placeholder='Paste JSON data here!..'></textarea>
+
+                    <div class="d-flex justify-content-end mt-3">
+                        <button id="processTextBtn" class="btn btn-primary">🚀 Proses JSON</button>
+                    </div>
+                </div>
+
+                <!-- Right: Result + Chart -->
+                <div class="col-md-6 d-none" id="resultContainer">
+                    <div id="result" class="mb-3"></div>
+                    <div class="chart-container mt-3">
+                        <canvas id="dataChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
