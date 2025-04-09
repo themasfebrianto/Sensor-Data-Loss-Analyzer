@@ -59,23 +59,19 @@
             font-size: 0.95rem;
         }
 
-        .chart-container {
-            height: 350px;
-        }
-
-        canvas {
-            width: 100% !important;
-            height: 100% !important;
-        }
-
         .label {
             font-weight: 500;
             color: #555;
         }
 
-        .success-text {
-            color: #28a745;
-            font-weight: 600;
+        .chart-container {
+            height: 600px;
+            max-width: 100%;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
         }
     </style>
 </head>
@@ -86,8 +82,8 @@
             <h3 class="text-center mb-4">📊 Sensor Data Loss Analyzer</h3>
 
             <div class="row g-4">
-                <!-- Left: JSON Input -->
-                <div class="col-md-6">
+                <!-- Top: JSON Input -->
+                <div class="col-12">
                     <label for="jsonText" class="label mb-2">Paste JSON Data:</label>
                     <textarea class="form-control" id="jsonText" rows="15"
                         placeholder='Paste JSON data here!..'></textarea>
@@ -97,14 +93,15 @@
                     </div>
                 </div>
 
-                <!-- Right: Result + Chart -->
-                <div class="col-md-6 d-none" id="resultContainer">
+                <!-- Bottom: Result + Chart -->
+                <div class="col-12 d-none" id="resultContainer">
                     <div id="result" class="mb-3"></div>
                     <div class="chart-container mt-3">
                         <canvas id="dataChart"></canvas>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <script src="main.js"></script>
