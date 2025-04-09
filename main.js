@@ -71,8 +71,8 @@ function processSensorData(json, ctx, done) {
 <div><strong>Time Range:</strong> ${startTime} – ${endTime}</div>
 <div><strong>Total Entries:</strong> ${total}</div>
 <div><strong>Loss Entries:</strong> ${lossCount}</div>
-<div><strong>Loss Percentage:</strong><span class="danger-text"> ${percentLoss}%</span></div>
-<div><strong>Success Percentage:</strong> <span class="success-text">${percentSuccess}%</span></div>
+<div><strong>Loss Percentage:</strong>  <span class="text-danger">${percentLoss}%</span></div>
+<div><strong>Success Percentage:</strong>  <span class="text-success">${percentSuccess}%</span></div>
 `;
 
     const chart = new Chart(ctx, {
