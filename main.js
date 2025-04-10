@@ -155,10 +155,12 @@ function processSensorData(json) {
 
     document.getElementById('resultContainer').classList.remove('d-none');
     document.getElementById('result').innerHTML = `
-        <div><strong>Time Range:</strong> ${startTime} – ${endTime}</div>
-        <div><strong>Total Entries:</strong> ${total}</div>
-        <div><strong>Loss Entries:</strong> ${lossCount}</div>
-        <div><strong>Loss Percentage:</strong> <span class="text-danger">${percentLoss}%</span></div>
-        <div><strong>Success Percentage:</strong> <span class="text-success">${percentSuccess}%</span></div>
-    `;
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; ">
+      <div><strong>Time Range:</strong> ${startTime} – ${endTime}</div>
+      <div><strong>Total Entries:</strong> ${total}</div>
+      <div><strong>Loss Entries:</strong> ${lossCount}</div>
+      <div><strong>Loss Percentage:</strong> <span class="text-danger">${percentLoss}%</span></div>
+      <div><strong>Success Percentage:</strong> <span class="text-success">${percentSuccess}%</span></div>
+    </div>
+  `;
 }
